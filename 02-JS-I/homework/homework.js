@@ -140,13 +140,15 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  var valorcuadrado = math.pow(num, 2);
+  var valorcuadrado = Math.pow(num, 2);
   return valorcuadrado;  
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
+  var valoralcubo = Math.pow(num, 3);
+  return valoralcubo;
   
 }
 
