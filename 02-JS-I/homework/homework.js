@@ -251,7 +251,7 @@ function deEuroAdolar(euro){
   //Escribe tu código aquí
   var valor = euro * 1.20;
   console.log('la cantidad de: '+ euro + ' euros '+ ' es equivalente a: ');
-  console.log(valor + ' dolares');  
+  return(valor + ' dolares');  
 }
 
 
