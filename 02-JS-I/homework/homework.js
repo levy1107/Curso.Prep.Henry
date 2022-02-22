@@ -174,11 +174,11 @@ function redondearHaciaArriba(num) {
   return valor;  
 }
 
-function numeroRandom() {
+function numeroRandom(num) {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  var num = console.log(Math.random());
-  return num;
+
+  return Math.random();
 }
 
 function esPositivo(numero) {
@@ -190,11 +190,11 @@ function esPositivo(numero) {
   if(valor == 0){
     return false;
   }
-  else{ if(valor < 0){
-    console.log(valor, ' Es negativo');
+  else{ if(valor > 0){
+    return('Es positivo');
   }
-  else {(valor > 0) 
-  console.log(valor, ' Es Positivo');}}}
+  else {(valor < 0) 
+  return ('Es negativo');}}}
 
 
 function agregarSimboloExclamacion(str) {
@@ -202,21 +202,21 @@ function agregarSimboloExclamacion(str) {
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
   var valor = (str + '!');
-  console.log(valor);
+  return(valor);
 }
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  return (nombre+apellido);
+  return (nombre+' '+apellido);
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  console.log('hola  '+ nombre + '!')  
+  return('Hola '+ nombre + '!');
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -251,7 +251,7 @@ function deEuroAdolar(euro){
   //Escribe tu código aquí
   var valor = euro * 1.20;
   console.log('la cantidad de: '+ euro + ' euros '+ ' es equivalente a: ');
-  return(valor + ' dolares');  
+  return valor;  
 }
 
 
@@ -262,22 +262,22 @@ function esVocal(letra){
   var caracteres = letra.length;
   if ( caracteres == 1){
     if( letra == 'a'){
-      console.log('Es vocal')}
+      return('Es vocal');}
       else {if(letra == 'e'){
-        console.log('Es vocal')}
+        return('Es vocal');}
         else{if( letra == 'i'){
-          console.log('Es vocal')}
+          return('Es vocal');}
           else{ if( letra == 'o'){
-            console.log('Es vocal')}
+            return('Es vocal');}
             else{if(letra == 'u'){
-              console.log('Es vocal')}
+              return('Es vocal');}
             else{
-              console.log('dato incorrecto')}
+              return('Dato incorrecto');}
             }
           }}   
              }
       }
-      else{console.log('Dato incorrecto')}}
+      return('Dato incorrecto');}
 
    
       
