@@ -1,52 +1,72 @@
 // No cambies los nombres de las funciones.
 
-function devolverPrimerElemento(array) {
+function devolverPrimerElemento(array = ['primer numero', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-}
+  var primer = array[0];
+    return primer; 
+  }
 
 
-function devolverUltimoElemento(array) {
+function devolverUltimoElemento(array = ['primer numero', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
   // Devuelve el último elemento de un array
   // Tu código:
+  var ultimo = array.pop();
+  return ultimo;
 }
 
 
-function obtenerLargoDelArray(array) {
+function obtenerLargoDelArray(array = [0, 1, 2, 3, 4, 5]) {
   // Devuelve el largo de un array
   // Tu código:
+  return array.length;
 }
 
 
-function incrementarPorUno(array) {
+function incrementarPorUno(array = [0, 1, 2]) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-}
+  var array2 = [];
+  for(var i = 0; i < array.length; i++){
+    var valor = array[i] + 1;    
+    array2.push(valor);
+    
+    }
+    return array2;
+   }
 
 
-function agregarItemAlFinalDelArray(array, elemento) {
+function agregarItemAlFinalDelArray(array = [1, 2, 3], elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  array.push(elemento);
+  return array;
 }
 
 
-function agregarItemAlComienzoDelArray(array, elemento) {
+function agregarItemAlComienzoDelArray(array = [1, 2], elemento) {
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array;
 }
 
 
-function dePalabrasAFrase(palabras) {
+
+
+function dePalabrasAFrase(palabras = ['hola', 'mundo']){
   // "palabras" es un array de strings/cadenas
   // Devuelve un string donde todas las palabras estén concatenadas
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+var valor = _palabras[0] +' ' + _palabras[1];
+return valor;
 }
 
 
