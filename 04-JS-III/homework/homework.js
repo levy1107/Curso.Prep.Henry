@@ -6,6 +6,7 @@ function devolverPrimerElemento(array = ['primer numero', 1, 2, 3, 4, 5, 6, 7, 8
   var primer = array[0];
     return primer; 
   }
+  
 
 
 function devolverUltimoElemento(array = ['primer numero', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
@@ -65,16 +66,30 @@ function dePalabrasAFrase(palabras = ['hola', 'mundo']){
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-var valor = _palabras[0] +' ' + _palabras[1];
+var valor = palabras[0] +' ' + palabras[1];
 return valor;
 }
 
 
-function arrayContiene(array, elemento) {
+
+function arrayContiene(array = [1, 5], elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  
+  var valor = array.length;
+  console.log(valor + "  tamaño del array");
+  for(var i = 0; i < valor; i++){
+    var x = array[i];
+    if (x == elemento){
+      return true;
+    } 
+    console.log(i);       
+  }
+  return false;
 }
+   
+
 
 
 function agregarNumeros(numeros) {
