@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { suma } = require("../../02-JS-I/homework/homework");
+
 function devolverPrimerElemento(array = ['primer numero', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
@@ -69,17 +71,15 @@ function dePalabrasAFrase(palabras = ['hola', 'mundo']){
 var array = [];
 var x = palabras.length;
 for(var i = 0; i < x ;i++ ){
-console.log(i);
 if (i < x ){
   valor = palabras[i];
   array.push(valor);
 }
 }
-var str ='';
+var str = array[0];
 console.log(array);
-for(var e = 0; e< x;e++) {
-  console.log(e);
-  if(e < x){
+for(var e = 1; e< x;e++) {
+    if(e < x){
    str = str + ' ' + array[e];
   }
 }
@@ -112,6 +112,11 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var suma = 0;
+  for(var i=0; i < numeros.length; i++){
+    suma = suma + numeros[i];
+  }
+  return suma;
 }
 
 
@@ -119,13 +124,27 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var suma = 0;
+  var promedio;
+  for(var i = 0; i < resultadosTest.length; i++){
+    suma = suma + resultadosTest[i];
+     
+  }
+  return promedio = suma / resultadosTest.length;
 }
 
 
-function numeroMasGrande(numeros) {
+function numeroMasGrande(numeros) { 
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var grande = numeros[0];
+  for(var i=1; i < numeros.length; i++){
+    if(numeros[i] > grande){
+      grande  = numeros[i];
+    }
+  }
+  return grande;
 }
 
 
