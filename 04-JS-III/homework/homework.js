@@ -171,7 +171,6 @@ function cuentoElementos(arreglo){
     }
   }
   return contador
-
 }
 
 
