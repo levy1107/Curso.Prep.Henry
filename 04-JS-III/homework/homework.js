@@ -1,6 +1,5 @@
 // No cambies los nombres de las funciones.
 
-const { suma } = require("../../02-JS-I/homework/homework");
 
 function devolverPrimerElemento(array = ['primer numero', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
