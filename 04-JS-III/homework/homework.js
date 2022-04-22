@@ -56,19 +56,34 @@ function agregarItemAlComienzoDelArray(array, elemento) {
 }
 
 
-function dePalabrasAFrase(palabras) {
+function dePalabrasAFrase(palabras = ['hola', 'mundo']){
   // "palabras" es un array de strings/cadenas
   // Devuelve un string donde todas las palabras estén concatenadas
   // con espacios entre cada palabra
-  // Ejemplo: ['Hello', 'world!'] -> 'Hello world!f'
+  // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  return palabras.join(' ');
+var array = [];
+var x = palabras.length;
+for(var i = 0; i < x ;i++ ){
+if (i < x ){
+  valor = palabras[i];
+  array.push(valor);
+}
+}
+var str = array[0];
+console.log(array);
+for(var e = 1; e< x;e++) {
+    if(e < x){
+   str = str + ' ' + array[e];
+  }
+}
+return str;
 }
 
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
-  // Devuelve "true" si está, o "false" si no está
+  // Devuelve "true" si está, o "false" si no es esta
   // Tu código:
   var x = array.length;
   for(var i = 0;i < x; i++){
@@ -196,7 +211,7 @@ function todosIguales(arreglo) {
 } 
 
 
-function mesesDelAño(array) {
+function mesesDelAño(array = [1, 2, 3, 4, 5, 6]) {
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
