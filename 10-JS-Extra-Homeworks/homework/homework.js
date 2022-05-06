@@ -10,14 +10,34 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  var array1 = [];
+ 
+  for (let x in objeto){    
+    array1.push([x, objeto[x]]);
+  }
+  // array = ['D', 'B', 'C']
+  return array1;   
+ 
 }
 
-
+// comida
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  var objeto = {};
+  
+for(var i = 0; i < string.length; i++){
+  var suma = 0;
+  for(var i2 = 0; i2 < string.length ; i2++ ){
+    if ( string.charAt(i)=== string.charAt(i2)){
+      suma = suma + 1;
+    }
+    objeto[string.charAt(i)] = suma; 
+  }
+}
+return objeto;
 }
 
 
@@ -26,6 +46,22 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  var x = '';
+  var y = '';
+  for(var i = 0; i < s.length; i++){
+    
+    if(s[i] === s[i].toUpperCase()){
+      x = x.concat(s[i]);
+    }
+  }
+  for(var i = 0; i< s.length; i++){
+    if(s[i] !== s[i].toUpperCase()){
+      y = y.concat(s[i]);
+    }      
+  }
+  x = x.concat(y);
+
+  return x;
 }
 
 
@@ -35,6 +71,35 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  var x ='';
+  var y = '';
+  var z = '';
+  for(var i = 0; i < str.length; i++){
+    if(i === str.length - 1 ){
+      x = '';
+        for(var t = str.length - 1; t >=0 ;t-- ) {
+          if( str[t] !== ' '){
+            x = x.concat(str[t]);
+            
+          }
+          else{ z = z.concat(x);
+            return z;
+          }
+        }
+    }
+   else if(str[i] !== ' '){
+     x = x.concat(str[i]);
+   }
+   else{ 
+     for( var e = x.length - 1; e >= 0; e--){
+     y = y.concat(x[e]);
+      }
+      z = z.concat(y + ' '); 
+      y = '';
+      x = '';           
+}
+  }
+  
 } 
 
 
