@@ -108,22 +108,76 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  var x = numero.toString();
+  var y = '';
+  for(var i = x.length -1 ; i >= 0; i--){
+      y = y.concat(x[i]);
+  }
+  if( x === y){
+    return 'Es capicua';
+  }
+  else{ return 'No es capicua';}
+
+  
 }
 
 
-function deleteAbc(cadena){
+function deleteAbc(cadena) {
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  var z = [];
+  for (var i  = 0; i < cadena.length ; i++){
+    var x = cadena[i];
+    for(var d = 0; d < 3; d++){
+    for(var e = 0; e < x.length - 1; e++){  
+      if ( x[e] === 'b' || x[e] === 'c' || x[e] === 'a' ){
+        x = x.replaceAll(x[e], '' );
+        }            
+    } 
+      
+     }
+     z.push(x); 
+}
+return z;
 }
 
-
+// sortArray(['paraiso', 'dios', 'bebe', 'carroceria'])
 function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
-}
+  var conteo = arr.length
+  var arrayf = [];
+  var array =[];
+  var xy = 0;
+  var copia = arr;
+  for( var z = 0; z < conteo; z++){
 
+  for( var i = 0; i < copia.length; i++){               
+    xy = copia[i].length;                       ////////////// paso array de string a array numeros
+    array.push(xy);
+    }
+      
+    var x = array.length;
+  var primer = array[0];
+  for( var i = 1; i < x; i++){               ///////////////// calculo menor de array de numeros
+    if(array[i] < primer){
+      primer = array[i];
+    }
+  }  
+  var menor = 0;
+  for(var e = 0; e < copia.length; e++){
+    if ( primer === copia[e].length){
+      menor = copia.splice([e], 1,)[0];              ///////////////////// saco el menor de copia de arr string y lo pusheo en arrayf
+            break;
+    }    
+  }
+  array = [];
+ arrayf.push(menor);
+}
+  return arrayf;
+}
 
 function buscoInterseccion(arreglo1, arreglo2){
   //Existen dos arrays, cada uno con 5 números. A partir de ello, escribir una función que permita 
